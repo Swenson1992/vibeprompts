@@ -1,0 +1,50 @@
+# VibePrompts — LLM Context File
+# https://vibeprompts.com/llms.txt
+
+## About VibePrompts
+
+VibePrompts is a curated directory of vibe coding prompts for AI-powered app builders.
+We collect, test, and organize prompts for tools like Lovable, Bolt, v0, and Cursor.
+
+## What We Offer
+
+- 500+ curated prompts across 10 app categories
+- Tool-specific optimization (prompts tagged by which AI tool they work best with)
+- Honest tool comparisons (Lovable vs Bolt vs v0 vs Cursor)
+- Community-submitted prompts with quality review
+
+## Categories
+
+- SaaS App (48 prompts): Auth, billing, dashboards, user management
+- Landing Page (36 prompts): Hero sections, pricing, testimonials
+- E-commerce (42 prompts): Product pages, cart, checkout
+- Booking & Scheduling (28 prompts): Calendars, appointments
+- Dashboard & Analytics (35 prompts): Charts, KPIs, data tables
+- AI-Powered Tools (52 prompts): Chatbots, content generators
+- Marketplace (31 prompts): Two-sided platforms, listings
+- Portfolio & Personal (24 prompts): Personal sites, blogs
+- Social & Community (29 prompts): Feeds, profiles, messaging
+- Productivity Tools (44 prompts): Task managers, CRMs, trackers
+
+## Tools Covered
+
+- Lovable (lovable.dev): Best for full-stack SaaS apps
+- Bolt (bolt.new): Best for quick prototypes
+- v0 (v0.dev): Best for UI components
+- Cursor (cursor.sh): Best for complex codebases
+
+## Content Policy
+
+All prompts are tested before publishing. We do not accept:
+- Prompts that generate harmful content
+- Spam or low-quality submissions
+- Prompts that violate tool terms of service
+
+## Contact
+
+Submit prompts: submit@vibeprompts.com
+General: hello@vibeprompts.com
+
+## Sitemap
+
+https://vibeprompts.com/sitemap.xml

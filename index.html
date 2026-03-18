@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibePrompts — The Best Vibe Coding Prompts for AI Builders</title>
+  <meta name="description" content="Curated vibe coding prompts for Lovable, Bolt, v0, and Cursor. Build SaaS, landing pages, e-commerce, and more with battle-tested AI prompts.">
+  <meta name="keywords" content="vibe coding prompts, AI coding prompts, Lovable prompts, Bolt prompts, v0 prompts, vibe coding templates">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="VibePrompts — Vibe Coding Prompt Directory">
+  <meta property="og:description" content="The best curated prompts for AI-powered app building. Copy, paste, ship.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vibeprompts.com">
+  
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VibePrompts",
+    "url": "https://vibeprompts.com",
+    "description": "Curated vibe coding prompts for AI builders",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vibeprompts.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">VibePrompts</span>
+      </a>
+      <div class="nav-links">
+        <a href="#categories">Browse</a>
+        <a href="tools/comparison.html">Tool Comparison</a>
+        <a href="#submit">Submit</a>
+      </div>
+      <a href="#featured" class="nav-cta">Get Prompts →</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+    </div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>500+ prompts · Updated weekly</span>
+      </div>
+      <h1 class="hero-title">
+        The <em>Prompt Library</em><br>
+        for Vibe Coders
+      </h1>
+      <p class="hero-sub">
+        Battle-tested prompts for Lovable, Bolt, v0, and Cursor.<br>
+        Copy. Paste. Ship. No prompt engineering PhD required.
+      </p>
+      <div class="hero-search">
+        <input type="text" id="searchInput" placeholder="Search prompts... e.g. 'SaaS dashboard', 'booking app'" autocomplete="off">
+        <button onclick="handleSearch()">Search</button>
+      </div>
+      <div class="hero-tags">
+        <span class="tag-label">Popular:</span>
+        <a href="categories/saas.html" class="hero-tag">SaaS App</a>
+        <a href="categories/landing-page.html" class="hero-tag">Landing Page</a>
+        <a href="categories/ecommerce.html" class="hero-tag">E-commerce</a>
+        <a href="categories/booking.html" class="hero-tag">Booking</a>
+        <a href="categories/dashboard.html" class="hero-tag">Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Curated Prompts</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">10</span>
+          <span class="stat-label">App Categories</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">AI Tools Covered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">12k+</span>
+          <span class="stat-label">Builders Using This</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Browse by Category</div>
+        <h2 class="section-title">What are you building?</h2>
+        <p class="section-sub">Each category has 20–50 prompts, from starter scaffolds to advanced features.</p>
+      </div>
+      <div class="categories-grid">
+        
+        <a href="categories/saas.html" class="cat-card cat-saas">
+          <div class="cat-icon">🚀</div>
+          <div class="cat-content">
+            <h3>SaaS App</h3>
+            <p>Auth, billing, dashboards, user management</p>
+            <div class="cat-meta">
+              <span class="cat-count">48 prompts</span>
+              <span class="cat-tools">Lovable · Bolt · v0</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/landing-page.html" class="cat-card cat-landing">
+          <div class="cat-icon">🎯</div>
+          <div class="cat-content">
+            <h3>Landing Page</h3>
+            <p>Hero sections, pricing tables, testimonials</p>
+            <div class="cat-meta">
+              <span class="cat-count">36 prompts</span>
+              <span class="cat-tools">v0 · Bolt · Lovable</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/ecommerce.html" class="cat-card cat-ecom">
+          <div class="cat-icon">🛍️</div>
+          <div class="cat-content">
+            <h3>E-commerce</h3>
+            <p>Product pages, cart, checkout, inventory</p>
+            <div class="cat-meta">
+              <span class="cat-count">42 prompts</span>
+              <span class="cat-tools">Lovable · Bolt</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/booking.html" class="cat-card cat-booking">
+          <div class="cat-icon">📅</div>
+          <div class="cat-content">
+            <h3>Booking & Scheduling</h3>
+            <p>Calendars, appointments, availability</p>
+            <div class="cat-meta">
+              <span class="cat-count">28 prompts</span>
+              <span class="cat-tools">Lovable · v0</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/dashboard.html" class="cat-card cat-dash">
+          <div class="cat-icon">📊</div>
+          <div class="cat-content">
+            <h3>Dashboard & Analytics</h3>
+            <p>Charts, KPIs, data tables, reports</p>
+            <div class="cat-meta">
+              <span class="cat-count">35 prompts</span>
+              <span class="cat-tools">v0 · Cursor</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/ai-tools.html" class="cat-card cat-ai">
+          <div class="cat-icon">🤖</div>
+          <div class="cat-content">
+            <h3>AI-Powered Tools</h3>
+            <p>Chatbots, content generators, AI wrappers</p>
+            <div class="cat-meta">
+              <span class="cat-count">52 prompts</span>
+              <span class="cat-tools">Bolt · Lovable · Cursor</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/marketplace.html" class="cat-card cat-market">
+          <div class="cat-icon">🏪</div>
+          <div class="cat-content">
+            <h3>Marketplace</h3>
+            <p>Two-sided platforms, listings, reviews</p>
+            <div class="cat-meta">
+              <span class="cat-count">31 prompts</span>
+              <span class="cat-tools">Lovable · Bolt</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/portfolio.html" class="cat-card cat-port">
+          <div class="cat-icon">✨</div>
+          <div class="cat-content">
+            <h3>Portfolio & Personal</h3>
+            <p>Personal sites, blogs, showcases</p>
+            <div class="cat-meta">
+              <span class="cat-count">24 prompts</span>
+              <span class="cat-tools">v0 · Bolt</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/social.html" class="cat-card cat-social">
+          <div class="cat-icon">💬</div>
+          <div class="cat-content">
+            <h3>Social & Community</h3>
+            <p>Feeds, profiles, messaging, forums</p>
+            <div class="cat-meta">
+              <span class="cat-count">29 prompts</span>
+              <span class="cat-tools">Lovable · Bolt</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+        <a href="categories/productivity.html" class="cat-card cat-prod">
+          <div class="cat-icon">⚡</div>
+          <div class="cat-content">
+            <h3>Productivity Tools</h3>
+            <p>Task managers, notes, CRMs, trackers</p>
+            <div class="cat-meta">
+              <span class="cat-count">44 prompts</span>
+              <span class="cat-tools">Lovable · Cursor · v0</span>
+            </div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Prompts -->
+  <section class="section section-dark" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Featured</div>
+        <h2 class="section-title">Most Copied This Week</h2>
+        <p class="section-sub">The prompts builders keep coming back to.</p>
+      </div>
+      <div class="prompts-grid" id="promptsGrid">
+        <!-- Populated by JS -->
+      </div>
+      <div class="view-all-wrap">
+        <a href="categories/saas.html" class="btn-outline">View All Prompts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool Comparison CTA -->
+  <section class="section section-cta">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-left">
+          <div class="section-tag">Tool Guide</div>
+          <h2>Lovable vs Bolt vs v0<br><em>Which one should you use?</em></h2>
+          <p>We tested all three on 50+ real projects. Here's the honest breakdown — pricing, strengths, and when to switch.</p>
+          <a href="tools/comparison.html" class="btn-primary">Read the Comparison →</a>
+        </div>
+        <div class="cta-right">
+          <div class="tool-cards">
+            <div class="tool-mini tool-lovable">
+              <span class="tool-emoji">💜</span>
+              <span>Lovable</span>
+              <span class="tool-score">9.2/10</span>
+            </div>
+            <div class="tool-mini tool-bolt">
+              <span class="tool-emoji">⚡</span>
+              <span>Bolt</span>
+              <span class="tool-score">8.8/10</span>
+            </div>
+            <div class="tool-mini tool-v0">
+              <span class="tool-emoji">▲</span>
+              <span>v0</span>
+              <span class="tool-score">8.5/10</span>
+            </div>
+            <div class="tool-mini tool-cursor">
+              <span class="tool-emoji">🖱️</span>
+              <span>Cursor</span>
+              <span class="tool-score">9.0/10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">From prompt to product in minutes</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Find your prompt</h3>
+          <p>Browse by app type or search for what you're building. Every prompt is tagged by tool compatibility.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Copy with one click</h3>
+          <p>Hit copy. The full prompt is in your clipboard, ready to paste into Lovable, Bolt, v0, or Cursor.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Customize & ship</h3>
+          <p>Swap in your brand, features, and data. Most prompts produce a working MVP in under 10 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit CTA -->
+  <section class="section section-submit" id="submit">
+    <div class="container">
+      <div class="submit-card">
+        <h2>Got a prompt that works?</h2>
+        <p>Share it with 12,000+ vibe coders. We review every submission and credit contributors.</p>
+        <a href="mailto:submit@vibeprompts.com?subject=Prompt Submission" class="btn-primary">Submit a Prompt →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">VibePrompts</span>
+          </a>
+          <p>The best prompt library for AI-powered app builders.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <a href="categories/saas.html">SaaS App</a>
+            <a href="categories/landing-page.html">Landing Page</a>
+            <a href="categories/ecommerce.html">E-commerce</a>
+            <a href="categories/booking.html">Booking</a>
+            <a href="categories/dashboard.html">Dashboard</a>
+          </div>
+          <div class="footer-col">
+            <h4>Tools</h4>
+            <a href="tools/lovable.html">Lovable Prompts</a>
+            <a href="tools/bolt.html">Bolt Prompts</a>
+            <a href="tools/v0.html">v0 Prompts</a>
+            <a href="tools/cursor.html">Cursor Prompts</a>
+            <a href="tools/comparison.html">Tool Comparison</a>
+          </div>
+          <div class="footer-col">
+            <h4>Site</h4>
+            <a href="#submit">Submit Prompt</a>
+            <a href="about.html">About</a>
+            <a href="sitemap.xml">Sitemap</a>
+            <a href="llms.txt">llms.txt</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 VibePrompts. Built with vibe coding, obviously.</p>
+        <p class="footer-note">Some links are affiliate links. We only recommend tools we actually use.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/prompts-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

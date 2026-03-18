@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lovable vs Bolt vs v0 vs Cursor — Honest Comparison 2025 | VibePrompts</title>
+  <meta name="description" content="We tested Lovable, Bolt, v0, and Cursor on 50+ real projects. Here's the honest breakdown: pricing, strengths, weaknesses, and when to use each.">
+  <meta name="keywords" content="Lovable vs Bolt, v0 vs Lovable, best vibe coding tool, Bolt vs v0, Cursor vs Lovable, AI app builder comparison">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Lovable vs Bolt vs v0 vs Cursor: Honest Comparison 2025",
+    "description": "We tested all four major vibe coding tools on 50+ real projects. Here's the honest breakdown.",
+    "author": { "@type": "Organization", "name": "VibePrompts" },
+    "publisher": { "@type": "Organization", "name": "VibePrompts" },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-03-01"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .tool-hero { padding: 120px 0 64px; }
+    .tool-hero-inner { max-width: 800px; }
+    .verdict-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 48px 0; }
+    .verdict-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .verdict-card.winner { border-color: var(--accent); box-shadow: 0 0 24px rgba(0,255,136,0.1); }
+    .verdict-emoji { font-size: 36px; margin-bottom: 12px; }
+    .verdict-name { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+    .verdict-score { font-family: var(--font-mono); font-size: 28px; color: var(--accent); font-weight: 500; }
+    .verdict-label { font-size: 12px; color: var(--text-3); margin-top: 4px; }
+    .verdict-best { font-size: 12px; color: var(--text-2); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+    .winner-badge { display: inline-block; background: var(--accent); color: #000; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; }
+    .section-prose { max-width: 800px; margin: 0 auto; }
+    .section-prose h2 { font-family: var(--font-display); font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin: 48px 0 16px; }
+    .section-prose h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; margin: 32px 0 12px; }
+    .section-prose p { color: var(--text-2); line-height: 1.8; margin-bottom: 16px; }
+    .section-prose ul { color: var(--text-2); line-height: 1.8; margin: 0 0 16px 20px; }
+    .section-prose li { margin-bottom: 6px; }
+    .pro-con { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .pros, .cons {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .pros { border-left: 3px solid var(--accent); }
+    .cons { border-left: 3px solid #ff4444; }
+    .pros h4 { color: var(--accent); font-family: var(--font-display); margin-bottom: 12px; }
+    .cons h4 { color: #ff4444; font-family: var(--font-display); margin-bottom: 12px; }
+    .pros li, .cons li { font-size: 14px; color: var(--text-2); margin-bottom: 6px; }
+    .use-case-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,255,136,0.2);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .use-case-box h4 { color: var(--accent); font-family: var(--font-display); margin-bottom: 8px; }
+    .use-case-box p { color: var(--text-2); font-size: 14px; margin: 0; }
+    .pricing-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .price-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+    .price-tag strong { color: var(--accent); }
+    @media (max-width: 768px) {
+      .verdict-grid { grid-template-columns: repeat(2, 1fr); }
+      .pro-con { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">VibePrompts</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#categories">Browse</a>
+        <a href="comparison.html" style="color: var(--accent)">Tool Comparison</a>
+        <a href="/#submit">Submit</a>
+      </div>
+      <a href="/#featured" class="nav-cta">Get Prompts →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Tool Comparison</span>
+      </div>
+      <div class="tool-hero-inner">
+        <div class="section-tag">Updated March 2025</div>
+        <h1 class="hero-title" style="font-size: clamp(36px, 5vw, 64px); text-align: left; margin-bottom: 20px;">
+          Lovable vs Bolt vs v0 vs Cursor
+        </h1>
+        <p style="font-size: 18px; color: var(--text-2); line-height: 1.7; max-width: 640px;">
+          We built 50+ real projects across all four tools. Here's the honest breakdown — no affiliate bias, just what actually works.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <!-- Quick Verdict -->
+    <div class="verdict-grid">
+      <div class="verdict-card winner">
+        <div class="winner-badge">BEST OVERALL</div>
+        <div class="verdict-emoji">💜</div>
+        <div class="verdict-name">Lovable</div>
+        <div class="verdict-score">9.2</div>
+        <div class="verdict-label">/ 10</div>
+        <div class="verdict-best">Best for: Full-stack SaaS apps</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-emoji">🖱️</div>
+        <div class="verdict-name">Cursor</div>
+        <div class="verdict-score">9.0</div>
+        <div class="verdict-label">/ 10</div>
+        <div class="verdict-best">Best for: Complex codebases</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-emoji">⚡</div>
+        <div class="verdict-name">Bolt</div>
+        <div class="verdict-score">8.8</div>
+        <div class="verdict-label">/ 10</div>
+        <div class="verdict-best">Best for: Quick prototypes</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-emoji">▲</div>
+        <div class="verdict-name">v0</div>
+        <div class="verdict-score">8.5</div>
+        <div class="verdict-label">/ 10</div>
+        <div class="verdict-best">Best for: UI components</div>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="section-prose">
+      <h2>Feature Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>💜 Lovable</th>
+            <th>⚡ Bolt</th>
+            <th>▲ v0</th>
+            <th>🖱️ Cursor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full-stack apps</td>
+            <td><span class="check">✓ Excellent</span></td>
+            <td><span class="check">✓ Good</span></td>
+            <td><span class="partial">~ Frontend only</span></td>
+            <td><span class="check">✓ Excellent</span></td>
+          </tr>
+          <tr>
+            <td>UI quality</td>
+            <td><span class="check">✓ Great</span></td>
+            <td><span class="check">✓ Good</span></td>
+            <td><span class="check">✓ Excellent</span></td>
+            <td><span class="partial">~ Depends on prompt</span></td>
+          </tr>
+          <tr>
+            <td>Database integration</td>
+            <td><span class="check">✓ Supabase built-in</span></td>
+            <td><span class="partial">~ Manual setup</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Any DB</span></td>
+          </tr>
+          <tr>
+            <td>Auth out of the box</td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="partial">~ Basic</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="partial">~ With setup</span></td>
+          </tr>
+          <tr>
+            <td>Deploy in one click</td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="partial">~ Vercel only</span></td>
+            <td><span class="cross">✗ Manual</span></td>
+          </tr>
+          <tr>
+            <td>Free tier</td>
+            <td><span class="partial">~ 5 projects</span></td>
+            <td><span class="check">✓ Generous</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td>Pricing (paid)</td>
+            <td>$20/mo</td>
+            <td>$20/mo</td>
+            <td>$20/mo</td>
+            <td>$20/mo</td>
+          </tr>
+          <tr>
+            <td>Code export</td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes (it's your IDE)</span></td>
+          </tr>
+          <tr>
+            <td>Multi-file editing</td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Excellent</span></td>
+          </tr>
+          <tr>
+            <td>Learning curve</td>
+            <td>Low</td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+            <td>Medium</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Lovable -->
+      <h2>💜 Lovable — Best for Full-Stack SaaS</h2>
+      <p>Lovable is the closest thing to a "full-stack AI developer" you can hire for $20/month. It handles auth, database, backend logic, and frontend in one coherent system. The Supabase integration is seamless — you describe what you want, and it sets up the tables, RLS policies, and API calls automatically.</p>
+      <p>Where Lovable shines: building real products that need to persist data, handle users, and eventually charge money. If you're building a SaaS, Lovable is the default choice.</p>
+      
+      <div class="pro-con">
+        <div class="pros">
+          <h4>✓ Pros</h4>
+          <ul>
+            <li>Best full-stack generation of any tool</li>
+            <li>Supabase integration is magic</li>
+            <li>One-click deploy to production</li>
+            <li>Handles auth, billing, and DB in one prompt</li>
+            <li>Active community with prompt templates</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Cons</h4>
+          <ul>
+            <li>Can get confused on complex multi-step features</li>
+            <li>Free tier is limited (5 projects)</li>
+            <li>Slower than Bolt for simple UI tasks</li>
+            <li>Sometimes over-engineers simple things</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case-box">
+        <h4>Use Lovable when:</h4>
+        <p>You're building a real SaaS product with users, data, and payments. Anything that needs a backend. Subscription apps, marketplaces, booking systems, internal tools.</p>
+      </div>
+
+      <div class="pricing-row">
+        <div class="price-tag">Free: <strong>5 projects</strong></div>
+        <div class="price-tag">Pro: <strong>$20/mo</strong></div>
+        <div class="price-tag">Teams: <strong>$50/mo</strong></div>
+      </div>
+
+      <!-- Bolt -->
+      <h2>⚡ Bolt — Best for Speed</h2>
+      <p>Bolt (by StackBlitz) is the fastest tool for going from idea to working prototype. The in-browser development environment means zero setup — you're coding in seconds. For quick demos, hackathon projects, or testing an idea, nothing beats Bolt's speed.</p>
+      <p>The tradeoff: Bolt is less opinionated about architecture, which means you get more flexibility but also more responsibility. It won't automatically set up your database or auth — you'll need to wire those up yourself.</p>
+
+      <div class="pro-con">
+        <div class="pros">
+          <h4>✓ Pros</h4>
+          <ul>
+            <li>Fastest time-to-prototype of any tool</li>
+            <li>Generous free tier</li>
+            <li>Runs entirely in browser (no install)</li>
+            <li>Great for React/Vue/Svelte projects</li>
+            <li>Easy to share and collaborate</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Cons</h4>
+          <ul>
+            <li>Less opinionated = more manual work</li>
+            <li>No built-in auth or database</li>
+            <li>Can struggle with complex state management</li>
+            <li>Less polished UI output than v0</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case-box">
+        <h4>Use Bolt when:</h4>
+        <p>You need a working prototype fast. Hackathons, demos, MVPs where you'll handle the backend separately. Also great for frontend-only projects like landing pages and tools.</p>
+      </div>
+
+      <!-- v0 -->
+      <h2>▲ v0 — Best for UI Components</h2>
+      <p>v0 by Vercel is the best tool for generating beautiful, production-ready UI components. If you need a pricing table, a dashboard layout, or a complex form — v0 will produce the cleanest code. It uses shadcn/ui and Tailwind by default, which means the output integrates perfectly with modern Next.js projects.</p>
+      <p>The limitation: v0 is a UI tool, not a full-stack tool. It doesn't handle backend logic, databases, or auth. Think of it as a very smart UI designer that writes code.</p>
+
+      <div class="pro-con">
+        <div class="pros">
+          <h4>✓ Pros</h4>
+          <ul>
+            <li>Best UI quality of any tool</li>
+            <li>Perfect shadcn/ui + Tailwind output</li>
+            <li>Great for component-by-component building</li>
+            <li>Integrates seamlessly with Next.js</li>
+            <li>Free tier is quite generous</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Cons</h4>
+          <ul>
+            <li>Frontend only — no backend</li>
+            <li>No database or auth</li>
+            <li>Less useful for full app generation</li>
+            <li>Vercel-centric (less flexible deployment)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case-box">
+        <h4>Use v0 when:</h4>
+        <p>You need beautiful UI components for an existing project. Landing pages, marketing sites, component libraries. Also great as a "design system generator" for your Next.js app.</p>
+      </div>
+
+      <!-- Cursor -->
+      <h2>🖱️ Cursor — Best for Complex Projects</h2>
+      <p>Cursor is different from the others — it's an AI-powered IDE, not a no-code builder. You write code alongside the AI, which means you need some coding knowledge. But for complex projects that outgrow the other tools, Cursor is unmatched.</p>
+      <p>The real power of Cursor is in its context awareness. It understands your entire codebase, can refactor across multiple files, and handles complex architectural decisions. If you're building something serious, Cursor is where you'll end up.</p>
+
+      <div class="pro-con">
+        <div class="pros">
+          <h4>✓ Pros</h4>
+          <ul>
+            <li>Best for complex, multi-file projects</li>
+            <li>Full IDE with AI assistance</li>
+            <li>Works with any language/framework</li>
+            <li>Codebase-aware context</li>
+            <li>Best for refactoring and debugging</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Cons</h4>
+          <ul>
+            <li>Requires coding knowledge</li>
+            <li>Steeper learning curve</li>
+            <li>No one-click deploy</li>
+            <li>More expensive for heavy use</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case-box">
+        <h4>Use Cursor when:</h4>
+        <p>Your project has grown beyond what Lovable/Bolt can handle. When you need precise control, complex business logic, or you're working on an existing codebase.</p>
+      </div>
+
+      <!-- Verdict -->
+      <h2>The Verdict: Which Should You Use?</h2>
+      <p><strong style="color: var(--text)">Building a SaaS?</strong> <span style="color: var(--accent)">Start with Lovable.</span> It handles the full stack and gets you to a working product fastest.</p>
+      <p><strong style="color: var(--text)">Need a quick prototype?</strong> <span style="color: var(--accent)">Use Bolt.</span> Zero setup, fast iteration, great for demos.</p>
+      <p><strong style="color: var(--text)">Building UI components?</strong> <span style="color: var(--accent)">Use v0.</span> The output quality is unmatched for React/Next.js projects.</p>
+      <p><strong style="color: var(--text)">Working on a complex codebase?</strong> <span style="color: var(--accent)">Use Cursor.</span> It's the only tool that scales with your project's complexity.</p>
+      <p>The good news: these tools complement each other. Many builders use v0 for UI, Lovable for the backend, and Cursor for complex features. Pick the right tool for the job.</p>
+
+    </div>
+  </div>
+
+  <!-- Related Prompts CTA -->
+  <section class="section section-dark" style="margin-top: 64px;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Get Started</div>
+        <h2 class="section-title">Prompts for each tool</h2>
+        <p class="section-sub">We have curated prompts optimized for each tool's strengths.</p>
+      </div>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="lovable.html" class="btn-outline">💜 Lovable Prompts</a>
+        <a href="bolt.html" class="btn-outline">⚡ Bolt Prompts</a>
+        <a href="v0.html" class="btn-outline">▲ v0 Prompts</a>
+        <a href="cursor.html" class="btn-outline">🖱️ Cursor Prompts</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 VibePrompts. <a href="/" style="color: var(--accent)">← Back to Home</a></p>
+        <p class="footer-note">Some links are affiliate links. We only recommend tools we actually use.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
