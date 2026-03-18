@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cursor Prompts — Build with ucursor | VibePrompts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono&family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>.cat-hero { padding: 120px 0 56px; border-bottom: 1px solid var(--border); }.prompt-full-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 20px; }.prompt-card-header { padding: 24px 28px 20px; display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; }.prompt-card-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }.prompt-card-desc { font-size: 14px; color: var(--text-2); line-height: 1.6; }.prompt-card-body { display: none; padding: 0 28px 24px; }.prompt-card-body.open { display: block; }.prompt-text-block { background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; white-space: pre-wrap; position: relative; }.copy-full-btn { position: absolute; top: 12px; right: 12px; background: var(--accent); color: #000; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; }.expand-btn { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; color: var(--text-2); cursor: pointer; }</style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="/" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">VibePrompts</span></a><div class="nav-links"><a href="/#categories">Browse</a><a href="comparison.html">Tool Comparison</a><a href="/#submit">Submit</a></div><a href="/#featured" class="nav-cta">Get Prompts →</a></div></nav>
+  <div class="cat-hero"><div class="container"><div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="comparison.html">Tools</a> <span>›</span> <span>ucursor</span></div><div style="display:flex;align-items:center;gap:20px;margin-bottom:20px"><div style="font-size:48px;background:var(--surface);border-radius:16px;width:72px;height:72px;display:flex;align-items:center;justify-content:center">🖱️</div><div><h1 class="hero-title" style="font-size:clamp(32px,5vw,56px);text-align:left;margin-bottom:8px">ucursor Prompts</h1><p style="color:var(--text-2);font-size:16px">Best prompts optimized for ucursor</p></div></div><p style="color:var(--text-2);font-size:17px;max-width:640px;line-height:1.7">Curated prompts specifically optimized for ucursor. These prompts work best with ucursor's strengths.</p></div></div>
+  <div class="container" style="padding:40px 24px 80px">
+    <div id="promptsList">
+      <div class="prompt-full-card">
+        <div class="prompt-card-header" onclick="toggleCard(this)"><div style="flex:1"><div class="prompt-card-title">Full-Stack ucursor Starter</div><div class="prompt-card-desc">Get started fast with this comprehensive starter prompt.</div></div><button class="expand-btn">View ↓</button></div>
+        <div class="prompt-card-body"><div class="prompt-text-block" id="p1">Build a full-stack app with ucursor:
+
+**Features:**
+- Modern React frontend
+- Clean component architecture
+- Responsive design
+- Best practices included
+
+**Tech:**
+- React + TypeScript
+- Tailwind CSS
+- Modern tooling</div><button class="copy-full-btn" onclick="copyPrompt('p1',this)">Copy</button></div></div>
+    </div>
+  </div>
+  <section class="section section-dark"><div class="container" style="text-align:center"><h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:16px">More coming soon</h2><a href="/#submit" class="btn-primary">Submit →</a></div></section>
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2025 VibePrompts. <a href="/" style="color:var(--accent)">← Back</a></p></div></div></footer>
+  <script>function toggleCard(h){h.nextElementSibling.classList.toggle('open');h.querySelector('.expand-btn').textContent=h.nextElementSibling.classList.contains('open')?'Hide ↑':'View ↓'}async function copyPrompt(id,btn){await navigator.clipboard.writeText(document.getElementById(id).textContent);btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent='Copy',2000)}</script>
+</body>
+</html>
