@@ -1,5 +1,5 @@
 # VibePrompts — LLM Context File
-# https://vibeprompts.com/llms.txt
+# vibeprompts.aiclaw404.cc/llms.txt
 
 ## About VibePrompts
 
@@ -47,4 +47,4 @@ General: hello@vibeprompts.com
 
 ## Sitemap
 
-https://vibeprompts.com/sitemap.xml
+vibeprompts.aiclaw404.cc/sitemap.xml
