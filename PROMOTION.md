@@ -51,7 +51,7 @@ A curated library of 500+ battle-tested prompts for AI-powered app builders.
 
 ### 文案 1 (简洁)
 ```
-🚀 Just launched VibePrompts.com
+🚀 Just launched VibePrompts.aiclaw404.cc
 
 500+ curated prompts for vibe coding with Lovable, Bolt, v0, and Cursor.
 
@@ -59,14 +59,14 @@ Build SaaS, landing pages, dashboards — copy, paste, ship.
 
 No prompt engineering PhD required.
 
-🔗 vibeprompts.com
+🔗 VibePrompts.aiclaw404.cc
 ```
 
 ### 文案 2 (故事版)
 ```
 I spent 3 months collecting and testing AI prompts for building apps.
 
-Today I'm open sourcing all 500+ of them → VibePrompts.com
+Today I'm open sourcing all 500+ of them → VibePrompts.aiclaw404.cc
 
 The best part? Every prompt works with Lovable/Bolt/v0/Cursor.
 
@@ -87,7 +87,7 @@ After:
 ✅ Paste into Lovable/Bolt/v0
 ✅ Working MVP in minutes
 
-500+ prompts at vibeprompts.com
+500+ prompts at VibePrompts.aiclaw404.cc
 ```
 
 ---
@@ -98,7 +98,7 @@ After:
 
 Hi [Name],
 
-I built VibePrompts.com — a curated library of 500+ vibe coding prompts that work great with [Lovable/Bolt/v0/Cursor].
+I built VibePrompts.aiclaw404.cc — a curated library of 500+ vibe coding prompts that work great with [Lovable/Bolt/v0/Cursor].
 
 I noticed your users often struggle with prompt writing, so I created prompts specifically optimized for [tool]:
 - Full-stack SaaS starters
@@ -121,7 +121,7 @@ Best,
 ```
 I built a free prompt library for vibe coding — wanted to share
 
-After months of testing AI prompts for building apps, I compiled the best ones into VibePrompts.com
+After months of testing AI prompts for building apps, I compiled the best ones into VibePrompts.aiclaw404.cc
 
 What's inside:
 - 500+ prompts across 10 categories
@@ -140,7 +140,7 @@ No signup required. Just copy and paste.
 
 Would love your feedback!
 
-vibeprompts.com
+VibePrompts.aiclaw404.cc
 ```
 
 ---
@@ -165,6 +165,6 @@ screencapture -T 3 -R "100,100,800,600" screenshot.png
 
 ## 🔗 相关链接
 
-- 网站: vibeprompts.com
+- 网站: VibePrompts.aiclaw404.cc
 - GitHub: github.com/Swenson1992/vibeprompts
-- 提交 Prompt: vibeprompts.com/submit.html
+- 提交 Prompt: VibePrompts.aiclaw404.cc/submit.html
