@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results — VibePrompts</title>
+  <meta name="description" content="Search results for vibe coding prompts">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono&family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .search-hero { padding: 120px 0 40px; border-bottom: 1px solid var(--border); }
+    .search-form { display: flex; max-width: 600px; margin: 0 auto 32px; gap: 12px; }
+    .search-form input { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 20px; font-size: 16px; color: var(--text); }
+    .search-form input:focus { outline: none; border-color: var(--accent); }
+    .search-form button { background: var(--accent); color: #000; border: none; border-radius: var(--radius); padding: 14px 28px; font-family: var(--font-display); font-weight: 700; cursor: pointer; }
+    .results-count { text-align: center; color: var(--text-2); margin-bottom: 32px; }
+    .results-count strong { color: var(--accent); }
+    .no-results { text-align: center; padding: 60px 20px; }
+    .no-results h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 12px; }
+    .no-results p { color: var(--text-2); }
+    .search-tips { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; max-width: 600px; margin: 0 auto; }
+    .search-tips h4 { font-family: var(--font-display); margin-bottom: 12px; }
+    .search-tips ul { color: var(--text-2); font-size: 14px; margin-left: 20px; }
+    .search-tips li { margin-bottom: 6px; }
+    .results-grid { display: grid; gap: 16px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">VibePrompts</span></a>
+      <div class="nav-links">
+        <a href="/#categories">Browse</a>
+        <a href="tools/comparison.html">Tool Comparison</a>
+        <a href="submit.html">Submit</a>
+      </div>
+      <a href="/#featured" class="nav-cta">Get Prompts →</a>
+    </div>
+  </nav>
+
+  <div class="search-hero">
+    <div class="container">
+      <h1 style="font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); text-align: center; margin-bottom: 24px;">Search Prompts</h1>
+      <form class="search-form" onsubmit="return doSearch(event)">
+        <input type="text" id="searchInput" placeholder="Search prompts... e.g. 'auth', 'chatbot', 'Stripe'">
+        <button type="submit">Search</button>
+      </form>
+      <p class="results-count" id="resultsCount"></p>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 40px 24px 80px;">
+    <div class="results-grid" id="resultsGrid"></div>
+    
+    <div class="no-results" id="noResults" style="display:none">
+      <h3>No prompts found</h3>
+      <p>Try different keywords or browse our categories.</p>
+      <a href="/#categories" class="btn-outline" style="margin-top: 20px;">Browse Categories →</a>
+    </div>
+
+    <div class="search-tips" id="searchTips">
+      <h4>Search Tips</h4>
+      <ul>
+        <li>Use keywords like "auth", "dashboard", "chat", "payment"</li>
+        <li>Search by tool: "Lovable", "Bolt", "v0", "Cursor"</li>
+        <li>Search by feature: "Stripe", "Supabase", "real-time"</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 VibePrompts. <a href="/" style="color: var(--accent)">← Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/prompts-data.js"></script>
+  <script>
+    // All prompts indexed for search
+    const ALL_PROMPTS = [
+      { id: "saas-starter-001", title: "Full-Stack SaaS Starter with Auth & Billing", category: "saas", tools: ["Lovable", "Bolt"], tags: ["auth", "billing", "stripe", "supabase", "dashboard"] },
+      { id: "landing-hero-001", title: "High-Converting SaaS Landing Page", category: "landing-page", tools: ["v0", "Bolt", "Lovable"], tags: ["landing", "conversion", "pricing", "testimonials"] },
+      { id: "ai-chatbot-001", title: "AI Chat Interface with Streaming", category: "ai-tools", tools: ["Lovable", "Bolt", "Cursor"], tags: ["ai", "chatbot", "openai", "streaming", "chat"] },
+      { id: "ecom-product-001", title: "E-commerce Product Page with Cart", category: "ecommerce", tools: ["Lovable", "Bolt"], tags: ["ecommerce", "cart", "product", "shopping", "stripe"] },
+      { id: "dashboard-analytics-001", title: "Analytics Dashboard with Charts", category: "dashboard", tools: ["v0", "Cursor"], tags: ["dashboard", "analytics", "charts", "data", "recharts"] },
+      { id: "booking-calendar-001", title: "Appointment Booking System", category: "booking", tools: ["Lovable", "v0"], tags: ["booking", "calendar", "scheduling", "appointments", "calendly"] },
+      { id: "portfolio-dev-001", title: "Developer Portfolio", category: "portfolio", tools: ["v0", "Bolt"], tags: ["portfolio", "personal", "developer", "resume"] },
+      { id: "blog-minimal-001", title: "Minimalist Blog", category: "portfolio", tools: ["v0", "Bolt"], tags: ["blog", "minimal", "writing", "markdown"] },
+      { id: "social-feed-001", title: "Social Media Feed", category: "social", tools: ["Lovable", "Bolt"], tags: ["social", "feed", "twitter", "posts", "realtime"] },
+      { id: "social-profile-001", title: "User Profiles", category: "social", tools: ["Lovable"], tags: ["profile", "social", "user"] },
+      { id: "social-dm-001", title: "Direct Messaging", category: "social", tools: ["Lovable", "Bolt"], tags: ["messaging", "chat", "dm", "realtime"] },
+      { id: "social-forum-001", title: "Discussion Forum", category: "social", tools: ["Lovable", "Bolt"], tags: ["forum", "reddit", "discussion", "comments"] },
+      { id: "prod-kanban-001", title: "Kanban Task Board", category: "productivity", tools: ["Lovable", "Cursor"], tags: ["kanban", "trello", "tasks", "board", "dragdrop"] },
+      { id: "prod-crm-001", title: "CRM Dashboard", category: "productivity", tools: ["Lovable", "Cursor"], tags: ["crm", "sales", "leads", "pipeline", "deals"] },
+      { id: "prod-notes-001", title: "Note-Taking App", category: "productivity", tools: ["Lovable", "v0"], tags: ["notes", "markdown", "folders", "tags"] },
+      { id: "prod-projects-001", title: "Project Management", category: "productivity", tools: ["Lovable", "Cursor"], tags: ["project", "tasks", "milestones", "team"] },
+      { id: "prod-habit-001", title: "Habit Tracker", category: "productivity", tools: ["Lovable"], tags: ["habit", "tracker", "streaks", "goals"] },
+      { id: "prod-invoice-001", title: "Invoice & Time Billing", category: "productivity", tools: ["Lovable", "Cursor"], tags: ["invoice", "billing", "freelance", "time-tracking"] },
+      { id: "marketplace-001", title: "Two-Sided Marketplace", category: "marketplace", tools: ["Lovable", "Bolt"], tags: ["marketplace", "two-sided", "stripe-connect", "listings"] },
+      { id: "jobboard-001", title: "Job Board Platform", category: "marketplace", tools: ["Lovable"], tags: ["jobs", "hiring", "careers", "applications"] },
+      { id: "ai-content-001", title: "AI Content Generator", category: "ai-tools", tools: ["Lovable", "Bolt"], tags: ["ai", "content", "gpt", "writing", "marketing"] },
+      { id: "ai-image-001", title: "AI Image Generator UI", category: "ai-tools", tools: ["Cursor"], tags: ["ai", "image", "stable-diffusion", "dalle", "gallery"] },
+      { id: "ecom-cart-001", title: "Shopping Cart Drawer", category: "ecommerce", tools: ["Lovable", "Bolt"], tags: ["cart", "ecommerce", "shopping"] },
+      { id: "ecom-checkout-001", title: "Checkout Flow with Stripe", category: "ecommerce", tools: ["Lovable"], tags: ["checkout", "stripe", "payment", "ecommerce"] },
+      { id: "ecom-listing-001", title: "Product Listing Grid", category: "ecommerce", tools: ["Lovable", "Bolt"], tags: ["products", "grid", "filter", "sort"] },
+      { id: "ecom-admin-001", title: "Admin Inventory Dashboard", category: "ecommerce", tools: ["Lovable"], tags: ["admin", "inventory", "management", "dashboard"] },
+      { id: "landing-pricing-001", title: "Pricing Table with Toggle", category: "landing-page", tools: ["v0"], tags: ["pricing", "saas", "toggle", "comparison"] },
+      { id: "landing-testimonials-001", title: "Testimonials Carousel", category: "landing-page", tools: ["v0", "Bolt"], tags: ["testimonials", "social-proof", "carousel"] },
+      { id: "landing-faq-001", title: "FAQ Accordion", category: "landing-page", tools: ["v0", "Bolt"], tags: ["faq", "accordion", "questions"] },
+      { id: "landing-hero-animated-001", title: "Hero with Animated Gradient", category: "landing-page", tools: ["v0", "Bolt"], tags: ["hero", "animated", "gradient", "landing"] },
+      { id: "saas-multi-tenant-001", title: "Multi-Tenant SaaS with Teams", category: "saas", tools: ["Lovable", "Bolt", "Cursor"], tags: ["multi-tenant", "teams", "roles", "permissions"] },
+      { id: "saas-onboarding-001", title: "5-Step Onboarding Wizard", category: "saas", tools: ["v0", "Lovable"], tags: ["onboarding", "wizard", "setup", "ux"] },
+      { id: "saas-api-keys-001", title: "API Key Management", category: "saas", tools: ["Lovable", "Cursor"], tags: ["api", "keys", "developer", "security"] },
+      { id: "dashboard-realtime-001", title: "Real-time Metrics Dashboard", category: "dashboard", tools: ["v0", "Cursor"], tags: ["realtime", "metrics", "live", "websocket"] },
+      { id: "dashboard-table-001", title: "Data Table with Sorting", category: "dashboard", tools: ["v0"], tags: ["table", "sort", "pagination", "filter"] },
+      { id: "dashboard-financial-001", title: "Financial Reports Dashboard", category: "dashboard", tools: ["v0", "Cursor"], tags: ["financial", "revenue", "mrr", "charts"] },
+      { id: "booking-resource-001", title: "Resource Booking System", category: "booking", tools: ["Lovable"], tags: ["resource", "equipment", "room", "booking"] },
+      { id: "portfolio-gallery-001", title: "Photo Gallery with Lightbox", category: "portfolio", tools: ["v0"], tags: ["gallery", "photos", "lightbox", "masonry"] },
+      { id: "portfolio-resume-001", title: "Resume / CV Website", category: "portfolio", tools: ["v0", "Bolt"], tags: ["resume", "cv", "professional"] },
+      { id: "social-notifications-001", title: "Notifications System", category: "social", tools: ["Lovable"], tags: ["notifications", "realtime", "alerts"] },
+    ];
+
+    function getQuery() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('q') || '';
+    }
+
+    function search(query) {
+      if (!query) return [];
+      const q = query.toLowerCase();
+      return ALL_PROMPTS.filter(p => 
+        p.title.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        p.tools.some(t => t.toLowerCase().includes(q)) ||
+        p.tags.some(t => t.toLowerCase().includes(q))
+      );
+    }
+
+    function renderResults(results, query) {
+      const grid = document.getElementById('resultsGrid');
+      const noResults = document.getElementById('noResults');
+      const tips = document.getElementById('searchTips');
+      const count = document.getElementById('resultsCount');
+
+      if (!query) {
+        grid.innerHTML = '';
+        noResults.style.display = 'none';
+        tips.style.display = 'block';
+        count.innerHTML = '';
+        return;
+      }
+
+      tips.style.display = 'none';
+      count.innerHTML = `Found <strong>${results.length}</strong> prompts for "<strong>${query}</strong>"`;
+
+      if (results.length === 0) {
+        grid.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+      }
+
+      noResults.style.display = 'none';
+      grid.innerHTML = results.map(p => `
+        <div class="prompt-card" style="cursor:pointer" onclick="window.location.href='prompts/${p.id}.html'">
+          <div class="prompt-header">
+            <h3 class="prompt-title">${p.title}</h3>
+            <span class="prompt-badge badge-${p.category}">${p.category}</span>
+          </div>
+          <div class="prompt-footer">
+            <div class="prompt-tools">${p.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>
+            <span style="font-size:12px;color:var(--text-3)">View →</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function doSearch(e) {
+      e.preventDefault();
+      const query = document.getElementById('searchInput').value;
+      if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+      }
+      return false;
+    }
+
+    // Initialize
+    const query = getQuery();
+    document.getElementById('searchInput').value = query;
+    const results = search(query);
+    renderResults(results, query);
+  </script>
+</body>
+</html>

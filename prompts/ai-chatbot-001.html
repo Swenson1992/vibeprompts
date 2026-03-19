@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat Interface with Streaming — VibePrompts</title>
+  <meta name="description" content="Production-ready AI chat UI with streaming responses, markdown, code highlighting. Works with Lovable, Bolt, Cursor.">
+  <link rel="canonical" href="https://vibeprompts.com/prompts/ai-chatbot-001.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Chat Interface with Streaming",
+    "author": { "@type": "Organization", "name": "VibePrompts" },
+    "publisher": { "@type": "Organization", "name": "VibePrompts" },
+    "url": "https://vibeprompts.com/prompts/ai-chatbot-001.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono&family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .prompt-detail-hero { padding: 120px 0 48px; border-bottom: 1px solid var(--border); }
+    .prompt-full-content { background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; font-family: var(--font-mono); font-size: 14px; line-height: 1.9; white-space: pre-wrap; position: relative; }
+    .copy-btn { position: absolute; top: 16px; right: 16px; background: var(--accent); color: #000; border: none; border-radius: 8px; padding: 10px 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; cursor: pointer; }
+    .prompt-meta { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .meta-tag { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-2); background: var(--surface); border: 1px solid var(--border); padding: 6px 14px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="/" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">VibePrompts</span></a><div class="nav-links"><a href="/#categories">Browse</a><a href="../tools/comparison.html">Tool Comparison</a><a href="/#submit">Submit</a></div><a href="/#featured" class="nav-cta">Get Prompts →</a></div></nav>
+  <div class="prompt-detail-hero"><div class="container"><div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/categories/ai-tools.html">AI Tools</a> <span>›</span> <span>AI Chat Interface</span></div><h1 style="font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;margin:16px 0">AI Chat Interface with Streaming</h1><p style="color:var(--text-2);font-size:17px;max-width:640px;line-height:1.7;margin-bottom:20px">Production-ready AI chat UI with streaming responses, markdown rendering, and code syntax highlighting.</p><div class="prompt-meta"><span class="meta-tag">📋 3,102 copies</span><span class="meta-tag">💜 Lovable</span><span class="meta-tag">⚡ Bolt</span><span class="meta-tag">🖱️ Cursor</span></div></div></div>
+  <div class="container" style="padding:48px 24px 80px">
+    <div class="prompt-full-content" id="promptText">Build an AI chatbot interface:
+
+**Chat Interface:**
+- Clean chat UI with message bubbles (user right, AI left)
+- Streaming text response (typewriter effect)
+- Code block rendering with syntax highlighting
+- Markdown support in responses
+- Copy button on each message
+
+**Sidebar:**
+- Conversation history list
+- New chat button
+- Search conversations
+- Delete conversation option
+
+**Input Area:**
+- Multi-line textarea that auto-expands
+- Send on Enter (Shift+Enter for newline)
+- Character/token counter
+- Attach file button (UI only)
+- Model selector dropdown
+
+**Features:**
+- Loading skeleton while waiting for response
+- Error state with retry button
+- Empty state with suggested prompts
+- Mobile-responsive layout
+
+**API Integration:**
+- Connect to OpenAI API (or Anthropic)
+- Stream responses using SSE
+- Handle rate limits gracefully
+
+Style: Dark theme, similar to ChatGPT but more modern. Use Inter font.</div>
+    <button class="copy-btn" onclick="copyPrompt()">Copy Prompt</button>
+  </div>
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2025 VibePrompts. <a href="/" style="color:var(--accent)">← Back</a></p></div></div></footer>
+  <script>async function copyPrompt(){await navigator.clipboard.writeText(document.getElementById('promptText').textContent);document.querySelector('.copy-btn').textContent='✓ Copied!';setTimeout(()=>document.querySelector('.copy-btn').textContent='Copy Prompt',2000)}</script>
+</body>
+</html>

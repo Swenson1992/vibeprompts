@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Prompt — VibePrompts</title>
+  <meta name="description" content="Submit your best vibe coding prompts to share with thousands of builders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono&family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .submit-hero { padding: 120px 0 48px; border-bottom: 1px solid var(--border); }
+    .submit-intro { max-width: 600px; margin: 0 auto 48px; text-align: center; }
+    .submit-intro p { color: var(--text-2); font-size: 17px; line-height: 1.7; margin-top: 16px; }
+    .submit-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; max-width: 700px; margin: 0 auto 64px; }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-family: var(--font-display); font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+    .form-group label span { color: var(--accent); }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-family: var(--font-body); font-size: 15px; color: var(--text); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+    .form-group textarea { min-height: 200px; font-family: var(--font-mono); font-size: 13px; line-height: 1.7; resize: vertical; }
+    .form-group .hint { font-size: 12px; color: var(--text-3); margin-top: 6px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .checkbox-group { display: flex; gap: 16px; flex-wrap: wrap; }
+    .checkbox-item { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    .checkbox-item input { width: auto; }
+    .submit-actions { display: flex; gap: 12px; justify-content: flex-end; }
+    .btn-submit { background: var(--accent); color: #000; border: none; border-radius: var(--radius); padding: 14px 32px; font-family: var(--font-display); font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .btn-submit:hover { background: #00ffaa; transform: translateY(-1px); }
+    .btn-cancel { background: transparent; color: var(--text-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 24px; font-family: var(--font-display); font-size: 15px; font-weight: 600; cursor: pointer; }
+    .success-message { display: none; text-align: center; padding: 48px; }
+    .success-message.show { display: block; }
+    .success-icon { font-size: 64px; margin-bottom: 24px; }
+    .success-message h3 { font-family: var(--font-display); font-size: 28px; margin-bottom: 12px; }
+    .success-message p { color: var(--text-2); }
+    .guidelines { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; max-width: 700px; margin: 0 auto 48px; }
+    .guidelines h3 { font-family: var(--font-display); font-size: 20px; margin-bottom: 16px; }
+    .guidelines ul { color: var(--text-2); margin-left: 20px; }
+    .guidelines li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">VibePrompts</span></a>
+      <div class="nav-links">
+        <a href="/#categories">Browse</a>
+        <a href="tools/comparison.html">Tool Comparison</a>
+        <a href="#submit">Submit</a>
+      </div>
+      <a href="/#featured" class="nav-cta">Get Prompts →</a>
+    </div>
+  </nav>
+
+  <div class="submit-hero">
+    <div class="container">
+      <h1 style="font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); text-align: center; margin-bottom: 8px;">Submit a Prompt</h1>
+      <div class="submit-intro">
+        <p>Share your best vibe coding prompts with 12,000+ builders. Every submission gets reviewed — and we credit all contributors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 0 24px 80px;">
+    
+    <div class="guidelines">
+      <h3>📝 Submission Guidelines</h3>
+      <ul>
+        <li><strong>Be specific:</strong> Include tech stack, features, and design requirements</li>
+        <li><strong>Test it first:</strong> Make sure the prompt actually works in your chosen tool</li>
+        <li><strong>No harmful content:</strong> We don't accept prompts that generate harmful or illegal content</li>
+        <li><strong>Original work:</strong> Submit prompts you've written, not copied from elsewhere</li>
+        <li><strong>Complete prompts:</strong> Include enough detail for someone to copy-paste and get results</li>
+      </ul>
+    </div>
+
+    <div class="submit-card" id="submitForm">
+      <form onsubmit="return handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name <span>*</span></label>
+            <input type="text" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Email <span>*</span></label>
+            <input type="email" name="email" required placeholder="john@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Prompt Title <span>*</span></label>
+          <input type="text" name="title" required placeholder="e.g., Full-Stack SaaS Starter with Auth & Billing">
+        </div>
+
+        <div class="form-group">
+          <label>Category <span>*</span></label>
+          <select name="category" required>
+            <option value="">Select a category...</option>
+            <option value="saas">SaaS App</option>
+            <option value="landing-page">Landing Page</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="booking">Booking & Scheduling</option>
+            <option value="dashboard">Dashboard & Analytics</option>
+            <option value="ai-tools">AI-Powered Tools</option>
+            <option value="marketplace">Marketplace</option>
+            <option value="portfolio">Portfolio & Personal</option>
+            <option value="social">Social & Community</option>
+            <option value="productivity">Productivity Tools</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Which tools does this work with? <span>*</span></label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="tools" value="lovable"> 💜 Lovable</label>
+            <label class="checkbox-item"><input type="checkbox" name="tools" value="bolt"> ⚡ Bolt</label>
+            <label class="checkbox-item"><input type="checkbox" name="tools" value="v0"> ▲ v0</label>
+            <label class="checkbox-item"><input type="checkbox" name="tools" value="cursor"> 🖱️ Cursor</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Prompt Text <span>*</span></label>
+          <textarea name="prompt" required placeholder="Paste your complete prompt here...
+
+Example:
+Build a full-stack SaaS application with the following features:
+
+**Authentication:**
+- Email/password signup and login
+- Google OAuth integration
+..."></textarea>
+          <p class="hint">Include detailed instructions, tech stack preferences, and specific features.</p>
+        </div>
+
+        <div class="form-group">
+          <label>Short Description</label>
+          <input type="text" name="description" placeholder="One sentence describing what this prompt builds">
+        </div>
+
+        <div class="form-group">
+          <label>Tags (comma separated)</label>
+          <input type="text" name="tags" placeholder="e.g., auth, stripe, supabase, dashboard">
+        </div>
+
+        <div class="form-group">
+          <label>Would you like to be credited?</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="radio" name="credit" value="yes" checked> Yes, credit me</label>
+            <label class="checkbox-item"><input type="radio" name="credit" value="no"> No, submit anonymously</label>
+          </div>
+        </div>
+
+        <div class="submit-actions">
+          <button type="button" class="btn-cancel" onclick="window.location='/'">Cancel</button>
+          <button type="submit" class="btn-submit">Submit Prompt</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">✅</div>
+      <h3>Prompt Submitted!</h3>
+      <p>Thanks for your contribution. We'll review your prompt and add it to the library within 48 hours.</p>
+      <a href="/" class="btn-primary" style="margin-top: 24px;">Back to Home</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 VibePrompts. <a href="/" style="color: var(--accent)">← Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      
+      // Collect form data
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        title: form.title.value,
+        category: form.category.value,
+        tools: Array.from(form.tools.checked).map(c => c.value),
+        prompt: form.prompt.value,
+        description: form.description.value,
+        tags: form.tags.value,
+        credit: form.credit.value,
+        submittedAt: new Date().toISOString()
+      };
+
+      // Store in localStorage (in production, this would go to a backend)
+      const submissions = JSON.parse(localStorage.getItem('promptSubmissions') || '[]');
+      submissions.push(data);
+      localStorage.setItem('promptSubmissions', JSON.stringify(submissions));
+
+      // Show success message
+      document.getElementById('submitForm').style.display = 'none';
+      document.getElementById('successMessage').classList.add('show');
+
+      // Log for demo (remove in production)
+      console.log('New submission:', data);
+
+      return false;
+    }
+    </script>
+</body>
+</html>
